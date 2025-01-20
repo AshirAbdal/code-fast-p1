@@ -1,0 +1,118 @@
+[
+    {
+      "id": "1001",
+      "name": "Wireless Bluetooth Headphones",
+      "description": "High-quality wireless Bluetooth headphones with noise cancellation and 40-hour battery life.",
+      "category": "Electronics",
+      "brand": "SoundMax",
+      "price": 59.99,
+      "currency": "USD",
+      "stock": {
+        "available": true,
+        "quantity": 150
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/headphones1.jpg",
+          "alt_text": "Wireless Bluetooth Headphones - Black"
+        }
+      ],
+      "ratings": {
+        "average": 4.5,
+        "total_reviews": 230
+      }
+    },
+    {
+      "id": "1002",
+      "name": "Smart Fitness Watch",
+      "description": "Track your fitness goals with this lightweight and stylish smartwatch.",
+      "category": "Wearables",
+      "brand": "FitSmart",
+      "price": 89.99,
+      "currency": "USD",
+      "stock": {
+        "available": true,
+        "quantity": 200
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/watch1.jpg",
+          "alt_text": "Smart Fitness Watch"
+        }
+      ],
+      "ratings": {
+        "average": 4.2,
+        "total_reviews": 180
+      }
+    },
+    {
+      "id": "1003",
+      "name": "4K Ultra HD Smart TV",
+      "description": "Enjoy movies and shows in stunning 4K resolution with built-in streaming apps.",
+      "category": "Electronics",
+      "brand": "VisionPro",
+      "price": 399.99,
+      "currency": "USD",
+      "stock": {
+        "available": true,
+        "quantity": 75
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/tv1.jpg",
+          "alt_text": "4K Ultra HD Smart TV"
+        }
+      ],
+      "ratings": {
+        "average": 4.7,
+        "total_reviews": 90
+      }
+    },
+    {
+      "id": "1004",
+      "name": "Ergonomic Office Chair",
+      "description": "Comfortable and adjustable office chair with lumbar support for long work hours.",
+      "category": "Furniture",
+      "brand": "ChairEase",
+      "price": 129.99,
+      "currency": "USD",
+      "stock": {
+        "available": true,
+        "quantity": 120
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/chair1.jpg",
+          "alt_text": "Ergonomic Office Chair"
+        }
+      ],
+      "ratings": {
+        "average": 4.3,
+        "total_reviews": 140
+      }
+    },
+    {
+      "id": "1005",
+      "name": "Portable Coffee Maker",
+      "description": "Brew your favorite coffee anywhere with this compact and easy-to-use coffee maker.",
+      "category": "Kitchen",
+      "brand": "BrewMaster",
+      "price": 39.99,
+      "currency": "USD",
+      "stock": {
+        "available": true,
+        "quantity": 300
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/coffeemaker1.jpg",
+          "alt_text": "Portable Coffee Maker"
+        }
+      ],
+      "ratings": {
+        "average": 4.6,
+        "total_reviews": 310
+      }
+    }
+  ]
+  

@@ -1,101 +1,147 @@
-import Image from "next/image";
+import Button from "@/components/Dashboard/DashboardBtn";
+import ListItem from "@/components/shared/ListItem";
+import Image from 'next/image';
+import surfacePicture from "@/components/asset/surfer-blue-wave.jpg";
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  // const apple = ["apple", "banana",[1,2,3],{"t","m"}];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // console.log(apple[0]);
+
+  // const arr=apple.map((apple)=>{
+
+  //   console.log(apple);
+
+  // });
+
+
+const priceCaptionList =[
+
+  "Collect Customer Feedback",
+  "Unlimited boards",
+  "Admin Dashboard",
+  "24/7 Support"
+
+];
+
+
+  return (
+    <main >
+      
+      {/* header */}
+
+      <section className="bg-base-200 ">
+        <section className=" max-w-5xl flex flex-col md:flex-row justify-between items-center px-8 py-2 mx-auto ">
+          <div className="">Mysite</div>
+          <div className=" gap-0 md:gap-10 flex flex-col md:flex-row">
+            <a className="link link-hover" href="#home">Home</a>
+            <a className="link link-hover" href="#pricing">Pricing</a>
+            <a className="link link-hover" href="#faq">Contact</a>
+          </div>
+          <div className="">
+            {" "}
+            <button className="btn btn-primary">Login</button>
+          </div>
+        </section>
+      </section>
+
+      {/* hero-section */}
+
+      <section className="flex flex-col lg:flex-row py-32 px-8 max-w-5xl mx-auto gap-14 " id="home">
+
+      <Image alt="logo" src={surfacePicture} className="w-96"/>
+
+        <div className="mx-auto py-20 px-8  max-w-2xl items-center lg:items-start align-top">
+          <div className="font-extrabold font text-6xl py-8 "> Home page </div>
+
+          <div className="mb-10">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            asperiores unde expedita quis id deserunt explicabo dignissimos,
+          </div>
+
+          <Button></Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* pricing */}
+
+      <section className="bg-base-200" id="pricing">
+        <div className="py-32 px-8 max-w-3xl mx-auto ">
+          <p className=" text-sm uppercase text-center text-primary">Pricing</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-12 text-center">
+            A pricing that adapts your need
+          </h2>
+
+          <div className="bg-base-100 p-8 w-96 rounded-2xl mx-auto ">
+            <div className="flex gap-2 items-baseline">
+              <div className="font-extrabold text-4xl">$20</div>
+              <div className="uppercase text-sm font-medium opacity-50">
+                /month
+              </div>
+            </div>
+
+            <ul className="mb-2">
+{/* 
+    <ListItem>man </ListItem>
+      <ListItem item="Customer FeedBack"/> */}
+
+              {
+                priceCaptionList.map((priceList)=>{
+
+                  return (
+                    <li className="flex items-center gap-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                        className="size-4 text-green-400"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {priceList}
+                    </li>
+                  );
+
+                })
+              }
+
+            </ul>
+
+            <Button extrastyle="w-full" />
+          </div>
+        </div>
+      </section>
+
+      {/* faq section */}
+
+      <section className="bg-base-200" id="faq">
+        <div className="py-32 px-8 max-w-3xl mx-auto ">
+          <p className=" text-sm uppercase text-center text-primary">FAQ</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+
+         
+
+            <ul className="mb-2">
+
+                 
+
+            </ul>
+
+          
+        </div>
+      </section>
+
+
+    </main>
+
+
+
   );
 }
