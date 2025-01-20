@@ -3,7 +3,6 @@ import Example from "@/components/Dashboard/HooKs";
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 import images from  '@/app/images.jpeg'
 

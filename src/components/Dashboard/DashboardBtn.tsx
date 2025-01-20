@@ -2,15 +2,15 @@
 
 import Link from "next/link";
 
-const Button = ({extrastyle} : any) => {
-
-
+const Button = ({ extrastyle }: { extrastyle?: string }) => {
   return (
-    <Link href="/dashboard" className={`btn btn-primary ${extrastyle?extrastyle: ""}`} >
+    <Link
+      href="/dashboard"
+      className={`btn btn-primary ${extrastyle ? extrastyle : ""}`}
+    >
       Go To Dashboard
     </Link>
   );
 };
-
 
 export default Button;

@@ -1,8 +1,6 @@
 import Button from "@/components/Dashboard/DashboardBtn";
-import ListItem from "@/components/shared/ListItem";
-import Image from 'next/image';
+import Image from "next/image";
 import surfacePicture from "@/components/asset/surfer-blue-wave.jpg";
-
 
 export default function Home() {
   // const apple = ["apple", "banana",[1,2,3],{"t","m"}];
@@ -15,29 +13,30 @@ export default function Home() {
 
   // });
 
-
-const priceCaptionList =[
-
-  "Collect Customer Feedback",
-  "Unlimited boards",
-  "Admin Dashboard",
-  "24/7 Support"
-
-];
-
+  const priceCaptionList = [
+    "Collect Customer Feedback",
+    "Unlimited boards",
+    "Admin Dashboard",
+    "24/7 Support",
+  ];
 
   return (
-    <main >
-      
+    <main>
       {/* header */}
 
       <section className="bg-base-200 ">
         <section className=" max-w-5xl flex flex-col md:flex-row justify-between items-center px-8 py-2 mx-auto ">
           <div className="">Mysite</div>
           <div className=" gap-0 md:gap-10 flex flex-col md:flex-row">
-            <a className="link link-hover" href="#home">Home</a>
-            <a className="link link-hover" href="#pricing">Pricing</a>
-            <a className="link link-hover" href="#faq">Contact</a>
+            <a className="link link-hover" href="#home">
+              Home
+            </a>
+            <a className="link link-hover" href="#pricing">
+              Pricing
+            </a>
+            <a className="link link-hover" href="#faq">
+              Contact
+            </a>
           </div>
           <div className="">
             {" "}
@@ -48,11 +47,13 @@ const priceCaptionList =[
 
       {/* hero-section */}
 
-      <section className="flex flex-col lg:flex-row py-32 px-8 max-w-5xl mx-auto gap-14 " id="home">
+      <section
+        className="flex flex-col lg:flex-row py-32 px-8 max-w-5xl mx-auto gap-14 "
+        id="home"
+      >
+        <Image alt="logo" src={surfacePicture} className="w-96 " />
 
-      <Image alt="logo" src={surfacePicture} className="w-96"/>
-
-        <div className="mx-auto py-20 px-8  max-w-2xl items-center lg:items-start align-top">
+        <div className="mx-auto py-20 px-8  max-w-2xl items-center lg:items-start ">
           <div className="font-extrabold font text-6xl py-8 "> Home page </div>
 
           <div className="mb-10">
@@ -82,34 +83,29 @@ const priceCaptionList =[
             </div>
 
             <ul className="mb-2">
-{/* 
+              {/* 
     <ListItem>man </ListItem>
       <ListItem item="Customer FeedBack"/> */}
 
-              {
-                priceCaptionList.map((priceList)=>{
-
-                  return (
-                    <li className="flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        className="size-4 text-green-400"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      {priceList}
-                    </li>
-                  );
-
-                })
-              }
-
+              {priceCaptionList.map((priceList) => {
+                return (
+                  <li className="flex items-center gap-2" key={priceList}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      className="size-4 text-green-400"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    {priceList}
+                  </li>
+                );
+              })}
             </ul>
 
             <Button extrastyle="w-full" />
@@ -126,22 +122,9 @@ const priceCaptionList =[
             Frequently Asked Questions
           </h2>
 
-         
-
-            <ul className="mb-2">
-
-                 
-
-            </ul>
-
-          
+          <ul className="mb-2"></ul>
         </div>
       </section>
-
-
     </main>
-
-
-
   );
 }

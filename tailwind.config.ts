@@ -23,3 +23,14 @@ export default {
   },
 
 } satisfies Config;
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}", // Update the paths to match your project structure
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("daisyui")], // Make sure daisyui is listed here
+};
