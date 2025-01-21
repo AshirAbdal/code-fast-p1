@@ -1,6 +1,7 @@
 import Button from "@/components/Dashboard/DashboardBtn";
 import Image from "next/image";
 import surfacePicture from "@/components/asset/surfer-blue-wave.jpg";
+import DashboardBtn from "@/components/Dashboard/DashboardBtn";
 
 export default function Home() {
   // const apple = ["apple", "banana",[1,2,3],{"t","m"}];
@@ -61,7 +62,7 @@ export default function Home() {
             asperiores unde expedita quis id deserunt explicabo dignissimos,
           </div>
 
-          <Button></Button>
+          <DashboardBtn/>
         </div>
       </section>
 
@@ -108,7 +109,7 @@ export default function Home() {
               })}
             </ul>
 
-            <Button extrastyle="w-full" />
+            < DashboardBtn extrastyle="w-full" />
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const Button = ({ extrastyle }: { extrastyle?: string }) => {
+const DashboardBtn = ({ extrastyle }: { extrastyle?: string }) => {
   return (
     <Link
       href="/dashboard"
@@ -13,4 +13,4 @@ const Button = ({ extrastyle }: { extrastyle?: string }) => {
   );
 };
 
-export default Button;
+export default DashboardBtn;
