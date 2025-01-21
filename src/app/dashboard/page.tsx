@@ -1,36 +1,42 @@
+// app/dashboard/page.tsx
+
 import BackBtn from "@/components/Dashboard/BackBtn";
 import Example from "@/components/Dashboard/HooKs";
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
-
 import Image from "next/image";
+import images from '@/app/images.jpeg';
+import fs from 'fs';
+import path from 'path';
 
-import images from  '@/app/images.jpeg'
-
+interface Product {
+  id: string | number;
+  name: string;
+  description: string;
+}
 
 export default async function Dashboard() {
-  const res = await fetch("http://localhost:3000/products.json", {
-    cache: "no-store",
-  });
-  const products = await res.json();
+  // Define the path to products.json
+  const filePath = path.join(process.cwd(), 'public', 'products.json');
+
+  // Read the file synchronously
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+
+  // Parse the JSON data
+  const products: Product[] = JSON.parse(jsonData);
 
   return (
     <div className="px-20">
-      <div className="p-[100px] text-[100px] ">Welcome to Dashboard</div>
-
-    <Image alt="logo" src={images}/>
-
+      <div className="p-[100px] text-[100px]">Welcome to Dashboard</div>
+      <Image alt="logo" src={images} width={500} height={500} />
       <p>{products.length}</p>
-      {products.map((product: { id: Key | null | undefined; name: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }) => (
+      {products.map((product) => (
         <div className="py-3" key={product.id}>
           <h1>{product.name}</h1>
           <p>{product.description}</p>
         </div>
       ))}
-
-      <BackBtn/>
-
+      <BackBtn />
       <div>
-       <Example/>
+        <Example />
       </div>
     </div>
   );
