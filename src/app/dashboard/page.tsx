@@ -1,43 +1,17 @@
-// app/dashboard/page.tsx
+import ButtonSignOut from "@/src/components/Dashboard/ButtonSignOut";
 
-import BackBtn from "@/components/Dashboard/BackBtn";
-import Example from "@/components/Dashboard/HooKs";
-import Image from "next/image";
-import images from '@/app/images.jpeg';
-import fs from 'fs';
-import path from 'path';
 
-interface Product {
-  id: string | number;
-  name: string;
-  description: string;
-}
 
-export default async function Dashboard() {
-  // Define the path to products.json
-  const filePath = path.join(process.cwd(), 'public', 'products.json');
+export default function DashBoard(){
 
-  // Read the file synchronously
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
+    return(
 
-  // Parse the JSON data
-  const products: Product[] = JSON.parse(jsonData);
+        <main>
+            <h1>hlw</h1>
 
-  return (
-    <div className="px-20">
-      <div className="p-[100px] text-[100px]">Welcome to Dashboard</div>
-      <Image alt="logo" src={images} width={500} height={500} />
-      <p>{products.length}</p>
-      {products.map((product) => (
-        <div className="py-3" key={product.id}>
-          <h1>{product.name}</h1>
-          <p>{product.description}</p>
-        </div>
-      ))}
-      <BackBtn />
-      <div>
-        <Example />
-      </div>
-    </div>
-  );
+      <ButtonSignOut/>
+
+        </main>
+    );
+
 }

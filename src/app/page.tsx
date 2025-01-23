@@ -1,19 +1,15 @@
-import Button from "@/components/Dashboard/DashboardBtn";
-import Image from "next/image";
-import surfacePicture from "@/components/asset/surfer-blue-wave.jpg";
-import DashboardBtn from "@/components/Dashboard/DashboardBtn";
+"Use Client"
 
-export default function Home() {
-  // const apple = ["apple", "banana",[1,2,3],{"t","m"}];
+import {auth} from "@/auth"
+import ButtonLogin from "@/src/components/Dashboard/ButtonLogin"
 
-  // console.log(apple[0]);
+export default async function Home() {
+ 
 
-  // const arr=apple.map((apple)=>{
+ const session = await auth();
 
-  //   console.log(apple);
-
-  // });
-
+ console.log(session)
+ 
   const priceCaptionList = [
     "Collect Customer Feedback",
     "Unlimited boards",
@@ -41,7 +37,7 @@ export default function Home() {
           </div>
           <div className="">
             {" "}
-            <button className="btn btn-primary">Login</button>
+           <ButtonLogin session={session}/>
           </div>
         </section>
       </section>
@@ -52,7 +48,6 @@ export default function Home() {
         className="flex flex-col lg:flex-row py-32 px-8 max-w-5xl mx-auto gap-14 "
         id="home"
       >
-        <Image alt="logo" src={surfacePicture} className="w-96 " />
 
         <div className="mx-auto py-20 px-8  max-w-2xl items-center lg:items-start ">
           <div className="font-extrabold font text-6xl py-8 "> Home page </div>
@@ -62,7 +57,6 @@ export default function Home() {
             asperiores unde expedita quis id deserunt explicabo dignissimos,
           </div>
 
-          <DashboardBtn/>
         </div>
       </section>
 
@@ -84,9 +78,7 @@ export default function Home() {
             </div>
 
             <ul className="mb-2">
-              {/* 
-    <ListItem>man </ListItem>
-      <ListItem item="Customer FeedBack"/> */}
+    
 
               {priceCaptionList.map((priceList) => {
                 return (
@@ -109,7 +101,6 @@ export default function Home() {
               })}
             </ul>
 
-            < DashboardBtn extrastyle="w-full" />
           </div>
         </div>
       </section>
@@ -129,3 +120,4 @@ export default function Home() {
     </main>
   );
 }
+
